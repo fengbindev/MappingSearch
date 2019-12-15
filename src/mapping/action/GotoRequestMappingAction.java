@@ -15,10 +15,10 @@ import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.Pair;
 import mapping.service.*;
+import mapping.spring.StringUtils;
 import mapping.util.HttpMethod;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jsoup.helper.StringUtil;
 
 import javax.swing.*;
 import java.awt.datatransfer.DataFlavor;
@@ -81,7 +81,7 @@ public class GotoRequestMappingAction extends GotoActionBase implements DumbAwar
 
         String copiedURL = tryFindCopiedURL();
 
-        String predefinedText = (start.first == null || StringUtil.isBlank(start.first)) ? copiedURL : start.first;
+        String predefinedText = (start.first == null || StringUtils.isEmpty(start.first)) ? copiedURL : start.first;
 
         showNavigationPopup(callback, findUsagesTitle,
                 RestServiceChooseByNamePopup.createPopup(project, model, itemProvider, predefinedText,
