@@ -1,0 +1,39 @@
+<idea-plugin>
+  <id>com..ssrs.mapping.search</id>
+  <name>MappingSearch</name>
+  <version>1.0</version>
+  <vendor email="947164239@qq.com" url="">上善若水</vendor>
+
+  <description><![CDATA[
+
+    ]]></description>
+
+  <change-notes><![CDATA[
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <projectService serviceImplementation="mapping.service.GotoRequestMappingConfiguration"/>
+    <!-- Add your extensions here -->
+    <tipAndTrick feature-id="navigation.popup.service" file="GotoService.html"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="MappingSearch.ID" class="mapping.action.GotoRequestMappingAction" text="Mapping映射搜索"
+            description="Mapping映射搜索">
+      <add-to-group group-id="HelpMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt N"/>
+    </action>
+  </actions>
+
+</idea-plugin>
