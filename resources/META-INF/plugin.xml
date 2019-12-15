@@ -2,13 +2,18 @@
   <id>com..ssrs.mapping.search</id>
   <name>MappingSearch</name>
   <version>1.0</version>
-  <vendor email="947164239@qq.com" url="">上善若水</vendor>
+  <vendor email="947164239@qq.com" url="https://github.com/fengbindev/MappingSearch.git">上善若水</vendor>
 
   <description><![CDATA[
-
+      一个用于Mapping路径映射搜索的IDEA插件
     ]]></description>
 
   <change-notes><![CDATA[
+    v1.0.0<br>
+    <li>支持绝对路径搜索（http://localhost:8080/xxx -> /xxx），目前不支持带ContentPath</li>
+    <li>路径支持Ant表达式</li>
+    <li>支持指定当前Model类搜索</li>
+    <li>直接过滤指定请求类型</li>
     ]]>
   </change-notes>
 
