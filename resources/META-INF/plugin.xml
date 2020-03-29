@@ -14,6 +14,8 @@
     <li>路径支持Ant表达式</li>
     <li>支持指定当前Model类搜索</li>
     <li>直接过滤指定请求类型</li>
+    v1.0.1<br>
+    <li>增加ssrs-plugin文件可视化编辑模块</li>
     ]]>
   </change-notes>
 
@@ -27,9 +29,11 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
+    <dom.fileDescription implementation="mapping.plugin.PluginDomFileDescription" />
     <projectService serviceImplementation="mapping.service.GotoRequestMappingConfiguration"/>
     <!-- Add your extensions here -->
     <tipAndTrick feature-id="navigation.popup.service" file="GotoService.html"/>
+    <fileEditorProvider implementation="mapping.plugin.PluginFileEditorProvider"/>
   </extensions>
 
   <actions>
