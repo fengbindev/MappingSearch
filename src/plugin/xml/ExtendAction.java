@@ -9,5 +9,5 @@ public interface ExtendAction extends com.intellij.util.xml.DomElement{
     @SubTag("class")
     GenericDomValue<PsiClass> getClasses();
     GenericDomValue<String> getDescription();
-    GenericDomValue<PsiClass> getExtendPoint();
+    GenericDomValue<String> getExtendPoint();
 }

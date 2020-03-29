@@ -47,7 +47,7 @@ public class PluginComponent extends BasicDomElementComponent<Plugin> {
         ChildGenericValueColumnInfo actionId = new ChildGenericValueColumnInfo("id", new ExtendActionControl.ExtendActionID(), new DefaultCellEditor(new JTextField()));
         ChildGenericValueColumnInfo actionClasses = new ChildGenericValueColumnInfo("class",new ExtendActionControl.ExtendActionClass(), DomUIFactory.createCellEditor(domElement.getClasses()));
         ChildGenericValueColumnInfo actionDescription = new ChildGenericValueColumnInfo("description", new ExtendActionControl.ExtendActionDescription(), new DefaultCellEditor(new JTextField()));
-        ChildGenericValueColumnInfo actionExtendPoint = new ChildGenericValueColumnInfo("extendPointId", new ExtendActionControl.ExtendActionExtendPoint(), new DefaultCellEditor(new JTextField()));
+        ChildGenericValueColumnInfo actionExtendPoint = new ChildGenericValueColumnInfo("extendPointId", new ExtendActionControl.ExtendActionExtendPoint(), DomUIFactory.createCellEditor(domElement.getClasses()));
         ExtendActionControl extendActionControl = new ExtendActionControl(domElement, "extend-action", true, actionId, actionClasses, actionDescription, actionExtendPoint);
         doBind(extendActionControl, extendActionTable);
         // extendService
@@ -61,7 +61,7 @@ public class PluginComponent extends BasicDomElementComponent<Plugin> {
         ChildGenericValueColumnInfo itemId = new ChildGenericValueColumnInfo("id", new ExtendItemControl.ExtendItemID(), new DefaultCellEditor(new JTextField()));
         ChildGenericValueColumnInfo itemClasses = new ChildGenericValueColumnInfo("class",new ExtendItemControl.ExtendItemClass(), DomUIFactory.createCellEditor(domElement.getClasses()));
         ChildGenericValueColumnInfo itemDescription = new ChildGenericValueColumnInfo("description", new ExtendItemControl.ExtendItemDescription(), new DefaultCellEditor(new JTextField()));
-        ChildGenericValueColumnInfo itemExtendService = new ChildGenericValueColumnInfo("extendServiceId", new ExtendItemControl.ExtendItemExtendService(),new DefaultCellEditor(new JTextField()));
+        ChildGenericValueColumnInfo itemExtendService = new ChildGenericValueColumnInfo("extendServiceId", new ExtendItemControl.ExtendItemExtendService(),DomUIFactory.createCellEditor(domElement.getClasses()));
         ExtendItemControl extendItemControl = new ExtendItemControl(domElement, "extend-item", true, itemId, itemClasses, itemDescription, itemExtendService);
         doBind(extendItemControl, extendItemTable);
 
