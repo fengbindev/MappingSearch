@@ -122,4 +122,31 @@ public abstract class StringUtils {
 	public static boolean isEmpty(String str) {
 		return str == null || str.length() == 0;
 	}
+
+	private static final char space = ' ';
+
+	/**
+	 * 翻译的文字 转 驼峰
+	 *
+	 * @param param
+	 * @return
+	 */
+	public static String translatorToCamel(String param) {
+		if (param == null || "".equals(param.trim())) {
+			return "";
+		}
+		int len = param.length();
+		StringBuilder sb = new StringBuilder(len);
+		for (int i = 0; i < len; i++) {
+			char c = Character.toLowerCase(param.charAt(i));
+			if (c == space) {
+				if (++i < len) {
+					sb.append(Character.toUpperCase(param.charAt(i)));
+				}
+			} else {
+				sb.append(c);
+			}
+		}
+		return sb.toString();
+	}
 }

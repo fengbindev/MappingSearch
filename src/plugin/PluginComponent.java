@@ -1,21 +1,15 @@
-package mapping.plugin;
+package plugin;
 
 import com.intellij.openapi.project.Project;
-import com.intellij.util.xml.DomElement;
 import com.intellij.util.xml.ui.*;
-import mapping.plugin.extend.ExtendActionControl;
-import mapping.plugin.extend.ExtendItemControl;
-import mapping.plugin.extend.ExtendPointControl;
-import mapping.plugin.extend.ExtendServiceControl;
-import mapping.plugin.xml.ExtendAction;
-import mapping.plugin.xml.Plugin;
-import org.jetbrains.annotations.NotNull;
+import plugin.extend.ExtendActionControl;
+import plugin.extend.ExtendItemControl;
+import plugin.extend.ExtendPointControl;
+import plugin.extend.ExtendServiceControl;
+import plugin.xml.Plugin;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class PluginComponent extends BasicDomElementComponent<Plugin> {
     private JPanel myRootPane;

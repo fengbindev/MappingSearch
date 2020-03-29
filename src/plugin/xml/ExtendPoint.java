@@ -1,4 +1,4 @@
-package mapping.plugin.xml;
+package plugin.xml;
 
         import com.intellij.psi.PsiClass;
         import com.intellij.util.xml.GenericDomValue;

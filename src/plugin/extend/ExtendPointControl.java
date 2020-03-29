@@ -1,10 +1,10 @@
-package mapping.plugin.extend;
+package plugin.extend;
 
 import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.xml.DomElement;
 import com.intellij.util.xml.ui.DomCollectionControl;
-import mapping.plugin.PluginDomFixedChildDescription;
-import mapping.plugin.xml.ExtendPoint;
+import plugin.PluginDomFixedChildDescription;
+import plugin.xml.ExtendPoint;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;

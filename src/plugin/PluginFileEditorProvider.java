@@ -1,4 +1,4 @@
-package mapping.plugin;
+package plugin;
 
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.fileEditor.*;
@@ -12,7 +12,7 @@ import com.intellij.psi.xml.XmlFile;
 import com.intellij.util.xml.DomFileElement;
 import com.intellij.util.xml.DomManager;
 import com.intellij.util.xml.ui.DomFileEditor;
-import mapping.plugin.xml.Plugin;
+import plugin.xml.Plugin;
 import org.jdom.Element;
 import org.jetbrains.annotations.NotNull;
 
@@ -65,7 +65,7 @@ public class PluginFileEditorProvider implements FileEditorProvider, DumbAware {
 
     @NotNull
     public String getEditorTypeId() {
-        return "mapping.plugin.PluginFileEditorProvider";
+        return "plugin.PluginFileEditorProvider";
     }
 
     @NotNull

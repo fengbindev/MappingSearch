@@ -1,59 +1,59 @@
-package mapping.plugin.extend;
+package plugin.extend;
 
 import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.xml.DomElement;
 import com.intellij.util.xml.ui.DomCollectionControl;
-import mapping.plugin.PluginDomFixedChildDescription;
-import mapping.plugin.xml.ExtendAction;
+import plugin.PluginDomFixedChildDescription;
+import plugin.xml.ExtendService;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExtendActionControl extends DomCollectionControl<ExtendAction> {
+public class ExtendServiceControl extends DomCollectionControl<ExtendService> {
 
-    public ExtendActionControl(DomElement parentElement, String subTagName, boolean editable, ColumnInfo<ExtendAction, ?>... columnInfos) {
+    public ExtendServiceControl(DomElement parentElement, String subTagName, boolean editable, ColumnInfo<ExtendService, ?>... columnInfos) {
         super(parentElement, subTagName, editable, columnInfos);
     }
 
-    public static class ExtendActionID extends PluginDomFixedChildDescription {
+    public static class ExtendServiceID extends PluginDomFixedChildDescription {
         @NotNull
         @Override
         public List<? extends DomElement> getValues(@NotNull DomElement domElement) {
-            ExtendAction extendAction = (ExtendAction) domElement;
+            ExtendService extendService = (ExtendService) domElement;
             List<DomElement> list = new ArrayList<>();
-            list.add(extendAction.getId());
+            list.add(extendService.getId());
             return list;
         }
     }
 
-    public static class ExtendActionClass extends PluginDomFixedChildDescription {
+    public static class ExtendServiceClass extends PluginDomFixedChildDescription {
         @NotNull
         @Override
         public List<? extends DomElement> getValues(@NotNull DomElement domElement) {
-            ExtendAction extendAction = (ExtendAction) domElement;
+            ExtendService extendService = (ExtendService) domElement;
             List<DomElement> list = new ArrayList<>();
-            list.add(extendAction.getClasses());
+            list.add(extendService.getClasses());
             return list;
         }
     }
-    public static class ExtendActionDescription extends PluginDomFixedChildDescription {
+    public static class ExtendServiceDescription extends PluginDomFixedChildDescription {
         @NotNull
         @Override
         public List<? extends DomElement> getValues(@NotNull DomElement domElement) {
-            ExtendAction extendAction = (ExtendAction) domElement;
+            ExtendService extendService = (ExtendService) domElement;
             List<DomElement> list = new ArrayList<>();
-            list.add(extendAction.getDescription());
+            list.add(extendService.getDescription());
             return list;
         }
     }
-    public static class ExtendActionExtendPoint extends PluginDomFixedChildDescription {
+    public static class ExtendServiceItemClass extends PluginDomFixedChildDescription {
         @NotNull
         @Override
         public List<? extends DomElement> getValues(@NotNull DomElement domElement) {
-            ExtendAction extendAction = (ExtendAction) domElement;
+            ExtendService extendService = (ExtendService) domElement;
             List<DomElement> list = new ArrayList<>();
-            list.add(extendAction.getExtendPoint());
+            list.add(extendService.getItemClass());
             return list;
         }
     }

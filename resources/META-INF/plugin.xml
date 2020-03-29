@@ -5,7 +5,7 @@
   <vendor email="947164239@qq.com" url="https://github.com/fengbindev/MappingSearch.git">上善若水</vendor>
 
   <description><![CDATA[
-      一个用于Mapping路径映射搜索的IDEA插件
+      MappingSearch是一款开发中非常实用的工具，目前已有功能：（1）Mapping映射搜索（2）变量命名搜索
     ]]></description>
 
   <change-notes><![CDATA[
@@ -15,6 +15,8 @@
     <li>支持指定当前Model类搜索</li>
     <li>直接过滤指定请求类型</li>
     v1.0.1<br>
+    <li>增加变量命名搜索功能，集成CODEIF变量命名神器服务</li>
+    v1.0.2<br>
     <li>增加ssrs-plugin文件可视化编辑模块</li>
     ]]>
   </change-notes>
@@ -29,11 +31,11 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
-    <dom.fileDescription implementation="mapping.plugin.PluginDomFileDescription" />
+    <dom.fileDescription implementation="plugin.PluginDomFileDescription" />
     <projectService serviceImplementation="mapping.service.GotoRequestMappingConfiguration"/>
     <!-- Add your extensions here -->
     <tipAndTrick feature-id="navigation.popup.service" file="GotoService.html"/>
-    <fileEditorProvider implementation="mapping.plugin.PluginFileEditorProvider"/>
+    <fileEditorProvider implementation="plugin.PluginFileEditorProvider"/>
   </extensions>
 
   <actions>
@@ -42,6 +44,10 @@
             description="Mapping映射搜索">
       <add-to-group group-id="HelpMenu" anchor="first"/>
       <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt N"/>
+    </action>
+    <action id="Codeif.ID" class="codeif.action.CodeifAction" text="Codeif" description="变量名搜索">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl T"/>
     </action>
   </actions>
 

@@ -1,7 +1,7 @@
-package mapping.plugin;
+package plugin;
 
 import com.intellij.util.xml.DomFileDescription;
-import mapping.plugin.xml.ExtendAction;
+import plugin.xml.ExtendAction;
 
 public class ExtendActionDomFileDescription extends DomFileDescription{
 
